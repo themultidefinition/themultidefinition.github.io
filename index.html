@@ -21,6 +21,7 @@
         }
         .logo {
             max-width: 400px;
+            width: 100%;
             height: auto;
         }
         .content {
@@ -58,6 +59,41 @@
         }
         p {
             margin-bottom: 1em;
+        }
+        
+        /* 移动端适配 */
+        @media screen and (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            .content {
+                padding: 20px;
+            }
+            .logo {
+                max-width: 300px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            h3 {
+                font-size: 18px;
+            }
+            .quote {
+                font-size: 1.2em;
+            }
+        }
+
+        /* 更小屏幕的适配 */
+        @media screen and (max-width: 480px) {
+            .logo {
+                max-width: 250px;
+            }
+            .content {
+                padding: 15px;
+            }
         }
     </style>
 </head>
