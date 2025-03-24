@@ -2,150 +2,277 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=375, initial-scale=1.0">
     <title>TMD - The Multi-Definition</title>
     <style>
-        body {
-            font-family: "SimHei", "黑体", sans-serif;
-            font-style: normal;
-            line-height: 1.6;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #000000;
-            color: #e6e6e6;
-        }
-        .logo-container {
-            text-align: center;
-            margin: 40px 0;
-        }
-        .logo {
-            max-width: 400px;
-            width: 100%;
-            height: auto;
-        }
-        .content {
-            background-color: #000000;
-            padding: 40px;
-        }
-        h1, h2, h3 {
-            color: #e6e6e6;
-        }
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .tech-item {
-            margin-bottom: 30px;
-        }
-        .tech-item h3 {
-            margin-top: 0;
-        }
-        section {
-            margin: 40px 0;
-        }
-        .introduction {
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-        .quote {
-            font-size: 1.4em;
-            margin: 40px 0;
-            color: #e6e6e6;
-            font-style: italic;
-        }
-        .vision {
-            color: #cccccc;
-        }
-        p {
-            margin-bottom: 1em;
-        }
-        
-        /* 移动端适配 */
-        @media screen and (max-width: 768px) {
-            body {
-                padding: 10px;
-            }
-            .content {
-                padding: 20px;
-            }
-            .logo {
-                max-width: 300px;
-            }
-            h1 {
-                font-size: 24px;
-            }
-            h2 {
-                font-size: 20px;
-            }
-            h3 {
-                font-size: 18px;
-            }
-            .quote {
-                font-size: 1.2em;
-            }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* 更小屏幕的适配 */
-        @media screen and (max-width: 480px) {
-            .logo {
-                max-width: 250px;
-            }
-            .content {
-                padding: 15px;
-            }
+        body {
+            background-color: #ffffff;
+            width: 375px;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 375px;
+            background-color: #ffffff;
+            font-size: 0;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .nav-item img {
+            display: block;
+            height: 68.4375px;
+            width: auto;
+        }
+
+        .content {
+            margin-top: 68.4375px;
+            width: 375px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .home-up {
+            width: 375px;
+        }
+
+        .home-up img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .home-down {
+            width: 375px;
+            margin-top: 20px;
+        }
+
+        .home-down img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .carousel-container {
+            width: 375px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+            height: auto;
+        }
+
+        .carousel-track {
+            display: flex;
+            position: relative;
+            gap: 10px;
+        }
+
+        .carousel-slide {
+            width: 200px;
+            height: auto;
+            flex-shrink: 0;
+            cursor: pointer;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            pointer-events: none;
         }
     </style>
 </head>
 <body>
-    <div class="logo-container">
-        <img src="https://themultidefinition.github.io/logo.png" alt="TMD Logo" class="logo">
+    <div class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">
+                <img src="images/guide/TMD logo.jpg" alt="TMD Logo">
+            </a>
+            <a href="newest.html" class="nav-item">
+                <img src="images/guide/newest.jpg" alt="Newest">
+            </a>
+            <a href="about.html" class="nav-item">
+                <img src="images/guide/about.jpg" alt="About">
+            </a>
+            <a href="team.html" class="nav-item">
+                <img src="images/guide/tmd team.jpg" alt="TMD Team">
+            </a>
+        </div>
     </div>
-    
+
     <div class="content">
-        <h1>TMD (The Multi-Definition)</h1>
-        
-        <section class="introduction">
-            <p>TMD is the largest and most respected third-party authentication and grading company in Nedre Land for sound and music. Founded by Dr. Buzz Phylo, a famous doctor of acoustics, with the support of the Jabon Council.</p>
-
-            <p>TMD is committed to providing scientific and fair identification and rating services for sounds and music around the world, while promoting innovation and trade in sound art.</p>
-
-            <p>TMD's mission is to establish a standardized evaluation system for Nedre Land's music and sound industry through bioacoustics and audio signal processing technology. We not only focus on the artistry and cultural value of sound, but also analyze the essence and potential of sound from the perspectives of biology, physics and informatics. Whether it is a biological soundscape in nature or a musical work, TMD can provide multi-dimensional scientific identification and rating.</p>
-        </section>
-
-        <section class="technology">
-            <h2>TMD's academic appraisal and technology application</h2>
-
-            <div class="tech-item">
-                <h3>Bioacoustic analysis</h3>
-                <p>TMD uses advanced bioacoustic technology to analyze the interaction between sound and organisms. By accurately measuring the frequency, amplitude, harmonic structure, etc. of sound waves, we can evaluate the physiological and psychological effects of sound on organisms. TMD's research shows that sound waves can resonate with the cell structure of organisms, thereby affecting their physiological state. Using the combined analysis of Sonic Cell Modulator and Brainwave Synchronizer, TMD can more accurately systematically quantify the impact of sound on the cell activity of the evaluation source and the stimulation values ​​of different bands, providing more scientific data for the evaluation results.</p>
-            </div>
-
-            <div class="tech-item">
-                <h3>Sound signal processing and artificial intelligence</h3>
-                <p>TMD has developed an artificial intelligence-based sound signal processing system that can perform high-precision spectral analysis, emotion recognition and cultural interpretation of sound. Through deep learning algorithms, our system can identify emotional features in sound and evaluate its meaning and value in a specific cultural context.</p>
-            </div>
-
-            <div class="tech-item">
-                <h3>Interdisciplinary research on sound waves and neuroscience</h3>
-                <p>TMD cooperates with top institutions in the field of neuroscience to study the impact of sound waves on the human brain. Through electroencephalogram (EEG) and functional magnetic resonance imaging (fMRI) technology, we can monitor the listener's neural response in real time when exposed to different sounds, thus providing scientific basis for music therapy, acoustic hypnosis and other fields.</p>
-            </div>
-
-            <div class="tech-item">
-                <h3>Sound ecology and cultural heritage protection</h3>
-                <p>TMD not only focuses on artificially created sounds, but also strives to protect natural soundscapes and sound cultural heritage. We use acoustic sensor networks to record and analyze natural soundscapes around the world (such as rainforests, oceans, deserts, etc.), and at the same time establish digital archives for endangered sound cultural heritage (such as traditional musical instruments, dialect songs, etc.).</p>
-            </div>
-        </section>
-
-        <div class="quote">
-            "Sound is the language of the universe, and we are just its decoders." - Dr. Buzz Phylo
+        <div class="home-up">
+            <img src="images/home/home up.jpg" alt="Home Up">
         </div>
 
-        <section class="vision">
-            <p>As the founder of TMD, Dr. Buzz Phylo is not only an outstanding doctor of acoustics, but also a visionary leader. He believes that sound is not only an expression of art, but also the intersection of technology and culture. The establishment of TMD is to realize his infinite vision of the future of sound.</p>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- 轮播内容将由 JavaScript 动态生成 -->
+            </div>
+        </div>
 
-            <p>TMD will continue to lead the trend of sound technology and art and become the beacon of Nedre Land's sound industry. Whether it is music creators, sound designers, or ordinary sound enthusiasts, TMD will provide them with an ideal platform for exploration, creation and trading. As the most solid policy and financial supporter of TMD, Jabon Council believes that sound is the link between the past and the future, and the existence of TMD will promote Nedre Land's continuous innovation in the field of sound.</p>
-        </section>
+        <div class="home-down">
+            <img src="images/home/home down.jpg" alt="Home Down">
+        </div>
     </div>
+
+    <script>
+        window.addEventListener('load', () => {
+            const track = document.querySelector('#carouselTrack');
+            
+            // 获取保存的索引
+            let currentIndex = parseInt(localStorage.getItem('carouselIndex')) || 1;
+            const slideWidth = 210;
+            let autoplayInterval;
+
+            // 图片数组
+            const images = [
+                'images/home/8-9ours-Alasdair.png',
+                'images/home/1-v&o.png',
+                'images/home/2-pb.png',
+                'images/home/3-Dario Volpe.png',
+                'images/home/4-Abebe Marangi.png',
+                'images/home/5-dancancook.png',
+                'images/home/6-skeme.png',
+                'images/home/7-Alasdair.png',
+                'images/home/8-9ours-Alasdair.png',
+                'images/home/1-v&o.png'
+            ];
+
+            // 根据当前索引重新排序图片数组
+            function generateInitialHTML() {
+                // 清空轮播容器
+                track.innerHTML = '';
+                
+                // 生成 HTML
+                images.forEach((imgSrc) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                    slide.innerHTML = `<img src="${imgSrc}" alt="Slide">`;
+                    track.appendChild(slide);
+                });
+
+                // 设置初始位置
+                const offset = -(currentIndex * slideWidth) + 87.5;
+                track.style.transform = `translateX(${offset}px)`;
+            }
+
+            function updatePosition(animate = true) {
+                if (!animate) {
+                    track.style.transition = 'none';
+                } else {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                }
+
+                const offset = -(currentIndex * slideWidth) + 87.5;
+                track.style.transform = `translateX(${offset}px)`;
+
+                // 更新鼠标样式
+                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+                slides.forEach((slide, index) => {
+                    if (index === currentIndex) {
+                        slide.style.cursor = 'pointer';
+                    } else {
+                        slide.style.cursor = 'default';
+                    }
+                });
+
+                localStorage.setItem('carouselIndex', currentIndex.toString());
+
+                if (!animate) {
+                    track.offsetHeight;
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                }
+            }
+
+            function handleTransitionEnd() {
+                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+                if (currentIndex === slides.length - 1) {
+                    currentIndex = 1;
+                    updatePosition(false);
+                } else if (currentIndex === 0) {
+                    currentIndex = slides.length - 2;
+                    updatePosition(false);
+                }
+            }
+
+            function handleSlideClick(e) {
+                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+                const clickedSlide = e.target.closest('.carousel-slide');
+                const clickedIndex = slides.indexOf(clickedSlide);
+                
+                if (clickedIndex === currentIndex) {
+                    localStorage.setItem('carouselIndex', currentIndex.toString());
+                    const realIndex = currentIndex;
+                    window.location.href = `detail.html?img=${realIndex}`;
+                } else if (clickedIndex < currentIndex) {
+                    clearInterval(autoplayInterval);
+                    if (currentIndex > 0) {
+                        currentIndex--;
+                        updatePosition();
+                    }
+                    startAutoplay();
+                } else if (clickedIndex > currentIndex) {
+                    clearInterval(autoplayInterval);
+                    if (currentIndex < slides.length - 1) {
+                        currentIndex++;
+                        updatePosition();
+                    }
+                    startAutoplay();
+                }
+            }
+
+            function nextSlide() {
+                const slides = Array.from(track.querySelectorAll('.carousel-slide'));
+                if (currentIndex < slides.length - 1) {
+                    currentIndex++;
+                    updatePosition();
+                }
+            }
+
+            function startAutoplay() {
+                if (autoplayInterval) {
+                    clearInterval(autoplayInterval);
+                }
+                autoplayInterval = setInterval(nextSlide, 3000);
+            }
+
+            // 初始化轮播
+            generateInitialHTML();
+
+            // 事件监听
+            track.addEventListener('click', handleSlideClick);
+            track.addEventListener('transitionend', handleTransitionEnd);
+            track.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+            track.addEventListener('mouseleave', startAutoplay);
+
+            // 页面可见性变化
+            document.addEventListener('visibilitychange', () => {
+                if (document.hidden) {
+                    clearInterval(autoplayInterval);
+                    localStorage.setItem('carouselIndex', currentIndex.toString());
+                } else {
+                    startAutoplay();
+                }
+            });
+
+            // 开始自动播放
+            startAutoplay();
+        });
+    </script>
 </body>
 </html>

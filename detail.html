@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=375, initial-scale=1.0">
+    <title>TMD - Detail</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            width: 375px;
+            margin: 0 auto;
+            overflow-x: hidden;
+        }
+
+        .nav-container {
+            position: fixed;
+            top: 0;
+            width: 375px;
+            background-color: #ffffff;
+            font-size: 0;
+            z-index: 100;
+        }
+
+        .nav-item {
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .nav-item img {
+            display: block;
+            height: 68.4375px;
+            width: auto;
+        }
+
+        .content {
+            margin-top: 68.4375px;
+            width: 375px;
+        }
+
+        .content img {
+            width: 375px;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div class="nav-content">
+            <a href="index.html" class="nav-item">
+                <img src="images/guide/TMD logo.jpg" alt="TMD Logo">
+            </a>
+            <a href="newest.html" class="nav-item">
+                <img src="images/guide/newest-.jpg" alt="Newest">
+            </a>
+            <a href="about.html" class="nav-item">
+                <img src="images/guide/about.jpg" alt="About">
+            </a>
+            <a href="team.html" class="nav-item">
+                <img src="images/guide/tmd team.jpg" alt="TMD Team">
+            </a>
+        </div>
+    </div>
+
+    <div class="content" id="detailContent">
+        <!-- 图片将通过 JavaScript 动态插入 -->
+    </div>
+
+    <script>
+        // 获取 URL 参数
+        const urlParams = new URLSearchParams(window.location.search);
+        const imgId = urlParams.get('img');
+        
+        // 根据参数显示对应的图片
+        const contentDiv = document.getElementById('detailContent');
+        if (imgId === '1') {
+            contentDiv.innerHTML = '<img src="images/1-Soul-Alive-page.jpg">';
+        } else if (imgId === '2') {
+            contentDiv.innerHTML = '<img src="images/2-Negotiation skills-page.jpg">';
+        } else if (imgId === '3') {
+            contentDiv.innerHTML = '<img src="images/3-Black-Sunday-page.jpg">';
+        } else if (imgId === '4') {
+            contentDiv.innerHTML = '<img src="images/4-Zemene-Wube-page.jpg">';
+        } else if (imgId === '5') {
+            contentDiv.innerHTML = '<img src="images/5-taotiegong-page.jpg">';
+        } else if (imgId === '6') {
+            contentDiv.innerHTML = '<img src="images/6-The Heavy Funk Experience-page.jpg">';
+        } else if (imgId === '7') {
+            contentDiv.innerHTML = '<img src="images/7-Fade to Noir-page.jpg">';
+        } else if (imgId === '8') {
+            contentDiv.innerHTML = '<img src="images/8-X-page.jpg">';
+        }
+    </script>
+</body>
+</html>
